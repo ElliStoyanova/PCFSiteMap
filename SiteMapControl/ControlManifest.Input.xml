@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SampleNamespace" constructor="SiteMapControl" version="0.0.1" display-name-key="SiteMapControl" description-key="SiteMapControl description" control-type="standard" >
+    
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    
+    <property name="kmlUrl" display-name-key="KML URL" description-key="URL to the KML file" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="latitude" display-name-key="Latitude" description-key="Latitude" of-type="FP" usage="bound" required="true" />
+    <property name="longitude" display-name-key="Longitude" description-key="Longitude" of-type="FP" usage="bound" required="true" />
+    <resources>
+      <code path="index.ts" order="1" />
+      <!-- <external-resource path="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhVm7-yjacbCp4ntnkhZf0F3ZAcNqJoUs" key="GoogleMapsAPI" /> -->
+      <!-- <resource path="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhVm7-yjacbCp4ntnkhZf0F3ZAcNqJoUs" type="external" key="GoogleMapsAPI" /> -->
+    </resources>
+    
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>
