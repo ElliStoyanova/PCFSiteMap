@@ -10,8 +10,6 @@
     <property name="longitude" display-name-key="Longitude" description-key="Longitude" of-type="FP" usage="bound" required="true" />
     <resources>
       <code path="index.ts" order="1" />
-      <!-- <external-resource path="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhVm7-yjacbCp4ntnkhZf0F3ZAcNqJoUs" key="GoogleMapsAPI" /> -->
-      <!-- <resource path="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhVm7-yjacbCp4ntnkhZf0F3ZAcNqJoUs" type="external" key="GoogleMapsAPI" /> -->
     </resources>
     
     <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
