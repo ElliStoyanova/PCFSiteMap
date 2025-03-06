@@ -1,4 +1,5 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
+import { generateGeoJson  } from "./utilities/geojson-utils";
 /// <reference types="@types/google.maps" />
 
 export class SiteMapControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
@@ -44,7 +45,7 @@ export class SiteMapControl implements ComponentFramework.StandardControl<IInput
         this._container.style.height = "800px"; // Adjust as needed
 
         // Get KML URL from Dataverse (if stored in a file column)
-        this._kmlUrl = this.getGoogleDriveDownloadLink(this.getGoogleDriveFileId(context.parameters.kmlUrl.raw));
+        this._kmlUrl = this.getGoogleDriveDownloadLink(this.getGoogleDriveFileId(context.parameters?.kmlUrl?.raw));
         this._initialLat = context.parameters.latitude.raw || 0;
         this._initialLng = context.parameters.longitude.raw || 0;
         console.log("Initial lng and lat:", this._initialLat, this._initialLng);
@@ -134,7 +135,7 @@ export class SiteMapControl implements ComponentFramework.StandardControl<IInput
      * Adds a KML layer to the map.
      */
     private addKmlLayer(kmlUrl: string): void {
-        if (!this._map) return;
+        if (!this._map || !kmlUrl) return;
 
         const kmlLayer = new google.maps.KmlLayer({
             url: kmlUrl,

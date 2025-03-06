@@ -5,7 +5,7 @@
     <external-service-usage enabled="false">
     </external-service-usage>
     
-    <property name="kmlUrl" display-name-key="KML URL" description-key="URL to the KML file" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="kmlUrl" display-name-key="KML URL" description-key="URL to the KML file" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="latitude" display-name-key="Latitude" description-key="Latitude" of-type="FP" usage="bound" required="true" />
     <property name="longitude" display-name-key="Longitude" description-key="Longitude" of-type="FP" usage="bound" required="true" />
     <resources>
